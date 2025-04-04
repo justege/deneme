@@ -17,7 +17,6 @@ const glow = keyframes`
 
 export const LandingPage = () => {
     const { t } = useTranslation()
-    const navigate = useNavigate()
     const shopifyAppUrl = "https://apps.shopify.com/useranalytics-ai"
 
     return (
@@ -186,33 +185,3 @@ export const LandingPage = () => {
         </Box>
     )
 }
-
-// Stat Box Component
-const StatBox = ({ number, label }: { number: string; label: string }) => (
-    <Box
-        bg="white"
-        borderRadius="xl"
-        boxShadow="lg"
-        p={8}
-        textAlign="center"
-        minW={{ base: "140px", md: "180px" }}
-    >
-        <Text
-            fontSize={{ base: "2xl", md: "3xl" }}
-            fontWeight="bold"
-            color="purple.600"
-            mb={2}
-        >
-            {number}
-        </Text>
-        <Text
-            fontSize="sm"
-            color="gray.600"
-            textTransform="uppercase"
-            letterSpacing="wider"
-        >
-            {label}
-        </Text>
-    </Box>
-)
-
